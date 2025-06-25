@@ -6,7 +6,7 @@ int main() {
   char input;
   int startgame;
   
-  printf("Please start the game by tipping 1: \n");
+  printf("Please start the game by tipping 1: \n"); //
   scanf("%d", &startgame);
 
   if (startgame == 1) {
