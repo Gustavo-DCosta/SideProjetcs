@@ -1,12 +1,23 @@
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
+#include <map>
+
+#define MAX_PLAYERS 9
+#define MAX_ROLES 6
 
 int main() {
-    const std::string roles[6]= {"witch", "chaser", "welvewolve", "villager", "the bandit", "I can't remeber everything"};
+    std::map<int, std::string> players;
+    const std::string roles[MAX_ROLES] = {"witch", "chaser", "werewolf", "villager", "the bandit", "seer"};
+
     std::cout << "Welcome to my terminal simulator game\n";
-    srand(time(NULL));
-    std::string guesser = roles[rand() % 6];
-    std::cout << "Guesser: " << guesser << "\n";
-return 0;
+    std::srand(time(NULL));
+
+    for (int i = 1; i <= MAX_PLAYERS; i++) {
+        std::string random_role = roles[rand() % MAX_ROLES];
+        players[i] = random_role;
+        std::cout << "Player n° " << i << " got the role: " << players[i] << "\n";
+    }
+
+    return 0;
 }
