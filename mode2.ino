@@ -1,3 +1,4 @@
+#include <arduino.h>
 
 void mode2() {
   int a = 0;

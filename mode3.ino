@@ -1,3 +1,5 @@
+#include <arduino.h>
+
 void mode3() {
   int a = 0;
   Serial.println("La boucle va marcher 3 fois|\_/|");

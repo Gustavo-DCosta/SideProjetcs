@@ -1,3 +1,5 @@
+#include <arduino.h>
+
 void mode4() {
   for (int i=0; i<8; i++) {
     digitalWrite(leds[i], HIGH);
